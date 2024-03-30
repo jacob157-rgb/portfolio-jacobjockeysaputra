@@ -1,0 +1,30 @@
+{
+  "name": "vite-portfolio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "build-css": "npx tailwindcss -i ./public/css/index.css -o ./public/css/style.css --watch",
+    "build-js": "npx esbuild public/js/main.js --outfile=public/js/scripts.js --bundle --watch",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d dist"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "gh-pages": "^6.1.1",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3",
+    "vite": "^5.2.0"
+  },
+  "dependencies": {
+    "@marcreichel/alpine-typewriter": "^1.2.0",
+    "alpinejs": "^3.13.7",
+    "aos": "^2.3.4",
+    "esbuild": "^0.20.2",
+    "flowbite": "^2.3.0",
+    "toastify-js": "^1.12.0"
+  }
+}
